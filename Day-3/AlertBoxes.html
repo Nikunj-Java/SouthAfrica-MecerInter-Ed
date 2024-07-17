@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Alert</h2>
+
+    <button id="btn1" onclick="myFunction()">Try it</button>
+    
+     
+    <h2>Confirm Alert</h2>
+
+    <button id="btn2" onclick="myFunction1()">Try it</button>
+
+    <h3>Prompt Alert</h2>
+
+    <button id="btn3" onclick="myFunction2()">Try it</button>
+
+    <div id="text"></div>
+     
+
+
+
+    <script>
+        function myFunction() {
+            alert("I am an alert box!");
+            document.getElementById("text").innerHTML = "You have Accepted The Condition";
+        }
+        function myFunction1() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+                document.getElementById("text").innerHTML = "You have Pressed OK";
+            } else {
+                txt = "You pressed Cancel!";
+                document.getElementById("text").innerHTML = "You have Pressed Cancel, Sad to Here!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+            
+            
+        }
+
+        function myFunction2() {
+            let text;
+            let person = prompt("Please enter your name:", "Harry Potter");
+            if (person == null || person == "") {
+                text = "User cancelled the prompt.";
+                document.getElementById("text").innerHTML = "Text: "+text;
+            } else {
+                text = "Hello " + person + "! How are you today?";
+                document.getElementById("text").innerHTML = "Text: "+text;
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+
+</body >
+
+</html >
