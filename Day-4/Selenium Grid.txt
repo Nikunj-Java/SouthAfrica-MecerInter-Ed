@@ -1,0 +1,49 @@
+*********************************************************************
+Selenium Grid
+*********************************************************************
+STEP:1 DOWWNLOAD SELNIUM STANDALONE SERVER
+-------------------------------------------------
+lINK:https://www.selenium.dev/downloads/
+>goto>Previous Releases >selenium-server-standalone-3.5.3.jar file or 3.5.0
+
+
+
+*******************************************************************************
+STEP:2 SET UP HUB
+*******************************************************************************
+
+Copy the selenium standalone server file to particular folder and open the CMD there
+
+> java -jar selenium-server-standalone-3.5.3 -role hub
+
+if sometimes the posrt id busy you can change the port like
+
+> java -jar selenium-server-standalone-3.5.3 -role hub -port 4445
+
+
+Note: You will get a message that a hub is running.....
+
+copy the Ip Address and goto to browser and check the Hub is Running.....
+
+http://yourip:yourport/grid/console
+eg: http://192.168.1.100:4444/grid/console
+
+********************************************************************************
+STEP:3 SET UP NODE
+********************************************************************************
+
+
+1. Copy the latest Google Chrome Driver to below Address
+
+	Path=C:\Program Files\Google\Chrome\Application\chromedriver.exe
+2. open the another cmd from the same place where selenium server standalone file is present
+
+3. Proceed with Set of Commands
+> java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.3 -role node hub http://your_local_ip:port/grid/register
+
+
+eg:java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.3.jar -role node -hub http://192.168.1.100:4444/grid/register/
+
+
+similarly we can create another node
+java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.3.jar -role node -port 4457 -hub http://192.168.1.100:4444/grid/register/
