@@ -47,3 +47,22 @@ eg:java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\ch
 
 similarly we can create another node
 java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.3.jar -role node -port 4457 -hub http://192.168.1.100:4444/grid/register/
+
+
+******************************************************************************
+STEP:4 PREPARING CUSTOM NODE AND HUB
+******************************************************************************
+Goto>Google> search for Custom hub and node for selenium
+
+
+link:https://www.seleniumeasy.com/selenium-tutorials/configure-selenium-grid-using-json-config-file
+
+open: visual studi code or any editor and copy the hub and node config file separately and save it in json formate like hubconfig.json nodeconfig.json to the folder where your selenium standalone server file is available
+
+1. CUSTOM HUB:
+------------------------
+> java -jar selenium-server-standalone-3.5.0.jar -role hub -hubConfig hubconfig.json
+
+2. CUSTOME NODE:
+--------------------------
+> java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.0.jar -role node -nodeConfig nodeconfig.json

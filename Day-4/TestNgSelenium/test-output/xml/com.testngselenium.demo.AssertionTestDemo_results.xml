@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.810">
+  <properties />
+  
+  
+            <testcase name="TitleTest" time="2.810" classname="com.testngselenium.demo.AssertionTestDemo" />
+      
+</testsuite>
