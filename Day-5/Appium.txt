@@ -20,4 +20,65 @@ STEP:4 DOWNLOAD APPIUM DOCROE
 	>npm install appium-doctor -g or npm i appium-doctor -g
 	>appium-doctor --help
 	>appium-doctor --android
-STEP:5 
+STEP:5 goto>Adnroid Studio > Download Command Line tools for android 
+	1. unzip the folder and extract to specific location
+	2. goto>your sdk folder>bin> open cmd
+	3. check your mobile device version>about phone> check android version
+	4. according to your android version note the api level from her
+	link:https://en.wikipedia.org/wiki/Android_version_history
+	5. open user guide of sdk manager .it is available at the bootom of command line tool page in android studio
+	link:https://developer.android.com/tools/sdkmanager?_gl=1*ompu0p*_up*MQ..&gclid=CjwKCAjwnei0BhB-EiwAA2xuBoi6aimnKGZ1nZG_dZk9oDedsTAiZMxClW8x2hgGx_WfEY9_U9TBJBoCsz8QAvD_BwE&gclsrc=aw.ds
+	6.copy the command to download sdk platform from website
+	> sdkmanager "platform-tools" "platforms;android-30"
+	IF THIS ONE IS NOT WORKING
+	> sdkmanager --sdk_root="C:\Users\Admin\Desktop\sdk\bin" "platform-tools" "platforms;android-30"
+	> click y
+	> goto>your mobile device enable USB DEBUGGING MODE
+	> Open new CMD and run the below command
+	> adb device
+	> YOU  WILL GET YOUR DEVICE WITH ITS ID HERE
+	WARNING: IF YOU ARE NOT GETTING THIS SET THE ANDROID HOME PATH
+STEP:6 ANDROID_HOME
+	>goto>sdk file you have downloaded and copy the path
+	> set Environment variable in advance system Setting
+	
+	set system anvironment
+	ANDROID_HOME:C:\Users\Admin\AppData\Local\Android\Sdk
+	give the path where adb.exe is available
+	path:C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools
+
+	> again start the new cmd 
+	> adb device
+	> YOU  WILL GET YOUR DEVICE WITH ITS ID HERE
+
+STEP:7 DOWNLOAD THE APPIUM DRIVER
+	LINK:https://appium.io/docs/en/2.3/ecosystem/drivers/
+	>Download this: uiautomator2
+	>start new cmd
+	>appium driver install uiautomator2
+
+STEP:8 START APPIUM SERVER
+	> YOU CAN ALSO DOWNLOAD WINDOWS/MAC APPIUM SERVER INSTALLER
+	LINK:https://github.com/appium/appium-desktop/releases
+	> new cmd 
+	> appium +enter
+STEP:9 CREATE JAVA MAVEN APP
+
+	add below dependency
+	<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+add the attched java code
+
+
+
+	
