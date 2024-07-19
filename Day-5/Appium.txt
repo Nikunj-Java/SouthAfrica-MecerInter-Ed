@@ -1,0 +1,23 @@
+***********************************************************************************************************
+APPIUM
+***********************************************************************************************************
+
+STEP:1 Download Node.js
+
+STEP:2 CHECK VERSION
+	node version
+	> node -v
+	NPM Version
+	> npm -v
+	CHECK THE LOCATION
+	> where node
+	> where npm
+STEP:3 INSTALLLING APPIUM
+	> npm install -g appium or npm i -g appium
+
+	> appium --version
+STEP:4 DOWNLOAD APPIUM DOCROE
+	>npm install appium-doctor -g or npm i appium-doctor -g
+	>appium-doctor --help
+	>appium-doctor --android
+STEP:5 
